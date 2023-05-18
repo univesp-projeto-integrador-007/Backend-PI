@@ -1,0 +1,104 @@
+POST http://localhost:3000/api/products
+Content-Type: application/json
+
+{
+    "name": "Bolo de morango",
+    "description": "",
+    "price": 100,
+    "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.arqplace.com.br%2Fteste-teste&psig=AOvVaw1CnzpFFxYmN-09_jisZ5Wx&ust=1681156710344000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCOCZ7_bKnf4CFQAAAAAdAAAAABAD"
+}
+
+###
+
+GET http://localhost:3000/api/products
+
+
+###
+
+GET http://localhost:3000/api/products/644283e2570db2011b8c23b4
+###
+
+DELETE http://localhost:3000/api/products/643325b8334ed7a935732260
+
+###
+PUT http://localhost:3000/api/products/644283e2570db2011b8c23b4
+Content-Type: application/json
+
+{
+    "name": "Bolo de prestígio",
+    "description": "",
+    "price": 100,
+    "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.arqplace.com.br%2Fteste-teste&psig=AOvVaw1CnzpFFxYmN-09_jisZ5Wx&ust=1681156710344000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCOCZ7_bKnf4CFQAAAAAdAAAAABAD"
+}
+
+
+###
+POST http://localhost:3000/api/orders
+Content-Type: application/json
+
+{
+    "name": "João da Silva",
+    "address": "Rua dos cravos",
+    "description": "",
+    "neighborhood": "Parque das flores",
+    "date": "12/04/2023",
+    "products": [
+        {
+            "name": "bolo de maracuja",
+            "description": "com cobertura de chocolate",
+            "price": 100,
+            "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.arqplace.com.br%2Fteste-teste&psig=AOvVaw1CnzpFFxYmN-09_jisZ5Wx&ust=1681156710344000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCOCZ7_bKnf4CFQAAAAAdAAAAABAD"
+        },{
+            "name": "beijinho",
+            "description": "",
+            "price": 25,
+            "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.arqplace.com.br%2Fteste-teste&psig=AOvVaw1CnzpFFxYmN-09_jisZ5Wx&ust=1681156710344000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCOCZ7_bKnf4CFQAAAAAdAAAAABAD"
+        },{
+            "name": "brigadeiro",
+            "description": "",
+            "price": 25,
+            "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.arqplace.com.br%2Fteste-teste&psig=AOvVaw1CnzpFFxYmN-09_jisZ5Wx&ust=1681156710344000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCOCZ7_bKnf4CFQAAAAAdAAAAABAD"
+        }
+    ]
+}
+
+###
+GET http://localhost:3000/api/orders
+
+###
+GET http://localhost:3000/api/orders/64332ee9be8e94f98de909a0
+
+###
+DELETE http://localhost:3000/api/orders/64332ee9be8e94f98de909a0
+
+###
+PUT http://localhost:3000/api/orders/643427cdbe8e94f98de909a5
+Content-Type: application/json
+
+{
+    "name": "Meu evento",
+    "address": "Matheus",
+    "description": "Uma festa de aniversário",
+    "neighborhood": 3000,
+    "date": "12/04/2023",
+    "products": [
+        {
+            "name": "algum servico",
+            "description": "alguma descrição",
+            "price": 1500,
+            "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.arqplace.com.br%2Fteste-teste&psig=AOvVaw1CnzpFFxYmN-09_jisZ5Wx&ust=1681156710344000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCOCZ7_bKnf4CFQAAAAAdAAAAABAD"
+        }
+    ]
+}
+
+###
+POST http://localhost:3000/api/auth/resgister
+Content-Type: application/json
+
+{
+    "name": "Gabriel Cavalcante",
+    "email": "gabriel@gabriel.com",
+    "password": "09231203",
+    "confirmPassword": "34786234876"
+}
+
