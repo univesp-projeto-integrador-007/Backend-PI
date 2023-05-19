@@ -6,7 +6,6 @@ const dbPass = process.env.DB_PASS
 async function main(){
     try {
         await mongoose.connect(`mongodb+srv://${dbUser}:${dbPass}@cluster0.a3dr1js.mongodb.net/?retryWrites=true&w=majority`)
-        console.log('Conectado ao banco!');
     } catch (error) {
         console.log(`Erro: ${error}`)
     }
